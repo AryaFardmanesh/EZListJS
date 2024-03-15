@@ -6,7 +6,7 @@
     "scripts": {
         "test": "jest --watchAll",
         "babel_convert": "babel src --out-file dist/ezlist.js",
-        "compress": "terser src/ezlist.dev.js -o dist/ezlist.js",
+        "compress": "terser dist/ezlist.js -o dist/ezlist.js",
         "build": "npm run babel_convert & npm run compress"
     },
     "keywords": [
