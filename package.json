@@ -1,0 +1,29 @@
+{
+    "name": "EZListJS",
+    "version": "1.0.0",
+    "description": "A very easy and lightweight JavaScript library for working with linked list data structure.",
+    "main": "dist/ezlist.js",
+    "scripts": {
+        "test": "jest --watchAll",
+        "babel_convert": "babel src --out-file dist/ezlist.js",
+        "compress": "terser src/ezlist.dev.js -o dist/ezlist.js",
+        "build": "npm run babel_convert & npm run compress"
+    },
+    "keywords": [
+        "EZListJS",
+        "linkedlist",
+        "library",
+        "linkedlist js",
+        "data structure",
+        "linkedlist data structure"
+    ],
+    "author": "Arya Fardmanesh",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.23.9",
+        "@babel/core": "^7.24.0",
+        "@babel/preset-env": "^7.24.0",
+        "jest": "^29.7.0",
+        "terser": "^5.29.2"
+    }
+}
