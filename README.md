@@ -174,6 +174,7 @@ Below is an analysis of the time complexity for each method in the EZListJS libr
 This method adds an item to the linked list at the specified index.
 
 #### Time Complexity:
+- Add in empty: O(1)
 - Add in first: O(1)
 - Add in middle: O(n)
 - Add in last: O(1)
