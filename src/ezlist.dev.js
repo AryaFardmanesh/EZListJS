@@ -124,13 +124,13 @@ class LinkedList {
         this.item = function (index = _size - 1) {
             privateMethods.filter.type(index, 'number', 'item');
 
-            if (privateMethods.isEmpty()) {
+            if (privateMethods.isEmpty())
                 return undefined;
-            }else if (index == 0) {
+            else if (index == 0)
                 return _head.value;
-            }else if (index == (_size - 1)) {
+            else if (index == (_size - 1))
                 return _tail.value;
-            }else {
+            else {
                 let current = _head.next;
                 let cursor = 1;
 
