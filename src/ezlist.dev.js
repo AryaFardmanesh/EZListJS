@@ -27,9 +27,7 @@ class LinkedList {
         // Start linked list private methods
         const privateMethods = {
             isEmpty : function () {
-                if (_head == null && _tail == null && _size == 0)
-                    return true;
-                return false;
+                return (_size == 0);
             },
             filter : {
                 range : function (index, min, max, methodName) {
