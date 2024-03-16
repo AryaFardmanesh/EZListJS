@@ -87,9 +87,9 @@ class LinkedList {
             privateMethods.filter.range(index, 0, _size - 1, 'remove');
 
             if (index == 0) {
-                const head = _head;
-                _head = _head.next;
-                head.next = null;
+                const head  = _head         ;
+                _head       = _head.next    ;
+                head.next   = null          ;
             }else {
                 let
                     current         = _head.next    ,
