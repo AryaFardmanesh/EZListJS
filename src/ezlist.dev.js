@@ -31,14 +31,12 @@ class LinkedList {
             },
             filter : {
                 range : function (index, min, max, methodName) {
-                    if (index < min || index > max) {
+                    if (index < min || index > max)
                         throw new RangeError(`The index is out of the specified limit. <Method Call : '.${methodName}' & Input Index : '${index}' & Input Expected : 'index > ${min} && ${index} < ${max}'>`);
-                    }
                 },
                 type : function (input, type, methodName) {
-                    if (typeof input != type) {
+                    if (typeof input != type)
                         throw new TypeError(`The input type is not correct. <Method Call : '.${methodName}' & Input : '${input}' & Input Type : '${typeof input}' & Type Expected : '${type}'>`);
-                    }
                 }
             }
         };
