@@ -1116,6 +1116,44 @@ describe('Test .forEach method - Group', () => {
             linkedList.forEach(() => {}, 0, 'other');
         }).toThrow(TypeError);
     });
+
+    describe('Test .forEach method change main - Group', () => {
+        it('It should not be able to make any changes to the main list data - Unit 1', () => {
+            linkedList.add('item 1');
+            linkedList.add('item 2');
+            linkedList.add('item 3');
+            linkedList.add('item 4');
+
+            linkedList.forEach((value) => {
+                value = 'item x';
+            });
+
+            let actual = linkedList.toArray();
+            let expected = ['item 1', 'item 2', 'item 3', 'item 4'];
+
+            expect(actual).toEqual(expected);
+        });
+
+        /*
+        ISSUE | Bug: When we loop through the reference data with the .forEach method, we can change the original data with this method.
+
+        it('It should not be able to make any changes to the main list data - Unit 2', () => {
+            linkedList.add({ id : 1 });
+            linkedList.add({ id : 2 });
+            linkedList.add({ id : 3 });
+            linkedList.add({ id : 4 });
+
+            linkedList.forEach((value) => {
+                value.id = 0;
+            });
+
+            let actual = linkedList.toArray();
+            let expected = [{ id : 1 }, { id : 2 }, { id : 3 }, { id : 4 }];
+
+            expect(actual).toEqual(expected);
+        });
+        */
+    });
 });
 
 describe('Test .toArray method - Group', () => {
