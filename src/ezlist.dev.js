@@ -243,9 +243,8 @@ class LinkedList {
             }
 
             while (cursor < endIndex) {
-                if (current.value === item) {
+                if (current.value === item)
                     find.push(current.value);
-                }
 
                 cursor++;
                 current = current.next;
