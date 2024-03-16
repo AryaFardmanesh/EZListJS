@@ -190,9 +190,8 @@ class LinkedList {
             }
 
             while (cursor < startIndex) {
-                if (current.value === item) {
+                if (current.value === item)
                     find.push(cursor);
-                }
 
                 cursor++;
                 current = current.next;
