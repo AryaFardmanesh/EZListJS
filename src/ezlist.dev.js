@@ -163,9 +163,8 @@ class LinkedList {
             }
 
             while (cursor < endIndex) {
-                if (current.value === item) {
+                if (current.value === item)
                     return cursor;
-                }
 
                 cursor++;
                 current = current.next;
