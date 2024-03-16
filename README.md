@@ -28,26 +28,6 @@ const { LinkedList } = require('ezlistjs');
 
 // Create a new linked list
 const list = new LinkedList();
-
-// Add elements to the list
-list.add(10);
-list.add(20);
-list.add(30);
-
-// Remove an element from the list
-list.remove();
-
-// Check if the list is empty
-console.log(list.isEmpty()); // Output: false
-
-// Get the size of the list
-console.log(list.size()); // Output: 2
-
-// Get the item at a specific index
-console.log(list.item(0)); // Output: 10
-
-// Find the index of an item
-console.log(list.indexOf(20)); // Output: 1
 ```
 
 ## Method Documentation
@@ -102,7 +82,7 @@ This method returns the item at the specified index in the linked list.
 
 - The item at the specified index in the linked list.
 
-### `.indexOf(item [, startIndex [, endIndex]])`
+### `.indexOf(item, [startIndex], [endIndex])`
 
 This method returns the index of the first occurrence of the specified item within the specified range.
 
@@ -116,7 +96,7 @@ This method returns the index of the first occurrence of the specified item with
 
 - The index of the first occurrence of the specified item within the specified range, or `-1` if the item is not found.
 
-### `.lastIndexOf(item [, startIndex [, endIndex]])`
+### `.lastIndexOf(item, [startIndex], [endIndex])`
 
 This method returns the index of the last occurrence of the specified item within the specified range.
 
@@ -130,7 +110,7 @@ This method returns the index of the last occurrence of the specified item withi
 
 - The index of the last occurrence of the specified item within the specified range, or `-1` if the item is not found.
 
-### `.include(item [, startIndex [, endIndex]])`
+### `.include(item, [startIndex], [endIndex])`
 
 This method checks if the specified item is included in the linked list within the specified range.
 
@@ -145,7 +125,7 @@ This method checks if the specified item is included in the linked list within t
 - `true` if the specified item is found in the linked list within the specified range.
 - `false` if the specified item is not found in the linked list within the specified range.
 
-### `.findAll(item [, startIndex [, endIndex]])`
+### `.findAll(item, [startIndex], [endIndex])`
 
 This method returns an array of all occurrences of the specified item within the specified range.
 
@@ -159,7 +139,7 @@ This method returns an array of all occurrences of the specified item within the
 
 - An array containing all occurrences of the specified item within the specified range.
 
-### `.forEach(callback [, startIndex [, endIndex]])`
+### `.forEach(callback, [startIndex], [endIndex])`
 
 This method executes a provided function once for each item in the linked list within the specified range.
 
@@ -169,7 +149,7 @@ This method executes a provided function once for each item in the linked list w
 - `startIndex`: (Optional) The starting index of the iteration range.
 - `endIndex`: (Optional) The ending index of the iteration range.
 
-### `.toArray([startIndex [, endIndex]])`
+### `.toArray([startIndex], [endIndex])`
 
 This method converts the linked list to an array within the specified range.
 
