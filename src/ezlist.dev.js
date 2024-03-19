@@ -281,7 +281,7 @@ class LinkedList {
             }
 
             while (cursor < endIndex) {
-                functionToCall(privateMethods.copy(current.value));
+                functionToCall(privateMethods.copy(current.value), cursor);
 
                 cursor++;
                 current = current.next;

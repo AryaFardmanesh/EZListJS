@@ -1182,6 +1182,75 @@ describe('Test .forEach method - Group', () => {
             expect(actual).not.toEqual(expected);
         });
     });
+
+    describe('Test .forEach method index parameter - Group', () => {
+        it('It should correctly index the data in the list to the callBackFunction - Unit 1', () => {
+            linkedList.add('item 1');
+            linkedList.add('item 2');
+            linkedList.add('item 3');
+            linkedList.add('item 4');
+
+            let actual;
+            let expected = true;
+
+            linkedList.forEach((value, index) => {
+                if (value === 'item 2' && index === 1)
+                    actual = true;
+                else if (value === 'item 3' && index === 2)
+                    actual = true;
+                else if (value === 'item 4' && index === 3)
+                    actual = true;
+                else
+                    actual = false;
+            });
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('It should correctly index the data in the list to the callBackFunction - Unit 2', () => {
+            linkedList.add('item 1');
+            linkedList.add('item 2');
+            linkedList.add('item 3');
+            linkedList.add('item 4');
+
+            let actual;
+            let expected = true;
+
+            linkedList.forEach((value, index) => {
+                if (value === 'item 2' && index === 1)
+                    actual = true;
+                else if (value === 'item 3' && index === 2)
+                    actual = true;
+                else if (value === 'item 4' && index === 3)
+                    actual = true;
+                else
+                    actual = false;
+            }, 1);
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('It should correctly index the data in the list to the callBackFunction - Unit 3', () => {
+            linkedList.add('item 1');
+            linkedList.add('item 2');
+            linkedList.add('item 3');
+            linkedList.add('item 4');
+
+            let actual;
+            let expected = true;
+
+            linkedList.forEach((value, index) => {
+                if (value === 'item 2' && index === 1)
+                    actual = true;
+                else if (value === 'item 3' && index === 2)
+                    actual = true;
+                else
+                    actual = false;
+            }, 1, 3);
+
+            expect(actual).toEqual(expected);
+        });
+    });
 });
 
 describe('Test .toArray method - Group', () => {

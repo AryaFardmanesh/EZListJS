@@ -1,6 +1,6 @@
 {
     "name": "ezlistjs",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A very easy and lightweight JavaScript library for working with linked list data structure.",
     "main": "dist/ezlist.js",
     "scripts": {
