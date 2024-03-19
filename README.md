@@ -42,6 +42,7 @@ This method adds an item to the linked list at the specified index. If no index 
 
 - `item`: The item you want to add to the list.
 - `index`: (Optional) The position where you want to add the item in your list.
+    - Type expected: Number(int).
     - Default value: last position in your list.
 
 ### `.remove(index = last)`
@@ -51,6 +52,7 @@ This method removes the item at the specified index from the linked list. If no 
 #### Parameters:
 
 - `index`: (Optional) The index of the item you want to remove from the list.
+    - Type expected: Number(int).
     - Default value: index of the last item in the list.
 
 ### `.isEmpty()`
@@ -58,197 +60,196 @@ This method removes the item at the specified index from the linked list. If no 
 This method checks if the linked list is empty.
 
 #### Returns:
-
-- `true` if the linked list is empty.
-- `false` if the linked list is not empty.
+- `boolean`
+    - `true` if the linked list is empty.
+    - `false` if the linked list is not empty.
 
 ### `.size()`
 
 This method returns the number of items in the linked list.
 
 #### Returns:
+- `boolean`
+    - The number of items in the linked list.
 
-- The number of items in the linked list.
+### `.item(index = last)`
 
-### `.item(index)`
-
-This method returns the item at the specified index in the linked list.
+This method returns the item in the specified list in the linked list. If no index is provided, returns the last item in the list.
 
 #### Parameters:
 
 - `index`: The index of the item you want to retrieve from the list.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 
 #### Returns:
 
-- The item at the specified index in the linked list.
+- If find:
+    - The item at the specified index in the linked list.
+- If not find:
+    - undefined
 
-### `.indexOf(item, [startIndex], [endIndex])`
+### `.indexOf(item, startIndex = 0, endIndex = last)`
 
 This method returns the index of the first occurrence of the specified item within the specified range.
 
 #### Parameters:
 
 - `item`: The item you want to search for in the list.
+    - Type expected: Any.
+    - Default value: None.
 - `startIndex`: (Optional) The starting index of the search range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 - `endIndex`: (Optional) The ending index of the search range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 
 #### Returns:
+- Number(int).
+    - The index of the first occurrence of the specified item within the specified range, or `-1` if the item is not found.
 
-- The index of the first occurrence of the specified item within the specified range, or `-1` if the item is not found.
-
-### `.lastIndexOf(item, [startIndex], [endIndex])`
+### `.lastIndexOf(item, startIndex, endIndex)`
 
 This method returns the index of the last occurrence of the specified item within the specified range.
 
 #### Parameters:
 
 - `item`: The item you want to search for in the list.
+    - Type expected: Any.
+    - Default value: None.
 - `startIndex`: (Optional) The starting index of the search range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 - `endIndex`: (Optional) The ending index of the search range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 
 #### Returns:
 
-- The index of the last occurrence of the specified item within the specified range, or `-1` if the item is not found.
+- Number(int).
+    - The index of the last occurrence of the specified item within the specified range, or `-1` if the item is not found.
 
-### `.include(item, [startIndex], [endIndex])`
+### `.include(item, startIndex = 0, endIndex = size)`
 
 This method checks if the specified item is included in the linked list within the specified range.
 
 #### Parameters:
 
 - `item`: The item you want to check for in the list.
+    - Type expected: Any.
+    - Default value: None.
 - `startIndex`: (Optional) The starting index of the search range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 - `endIndex`: (Optional) The ending index of the search range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 
 #### Returns:
 
-- `true` if the specified item is found in the linked list within the specified range.
-- `false` if the specified item is not found in the linked list within the specified range.
+- Boolean:
+    - `true` if the specified item is found in the linked list within the specified range.
+    - `false` if the specified item is not found in the linked list within the specified range.
 
-### `.findAll(item, [startIndex], [endIndex])`
+### `.findAll(item, startIndex = 0, endIndex = last)`
 
 This method returns an array of all occurrences of the specified item within the specified range.
 
 #### Parameters:
 
 - `item`: The item you want to search for in the list.
+    - Type expected: Any.
+    - Default value: None.
 - `startIndex`: (Optional) The starting index of the search range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 - `endIndex`: (Optional) The ending index of the search range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 
 #### Returns:
 
-- An array containing all occurrences of the specified item within the specified range.
+- Array:
+    - An array containing all occurrences of the specified item within the specified range.
 
-### `.forEach(callback, [startIndex], [endIndex])`
+### `.forEach(callback, startIndex = 0, endIndex = last)`
 
 This method executes a provided function once for each item in the linked list within the specified range.
 
 #### Parameters:
 
 - `callback`: A function to execute for each item in the list.
+    - Type expected: Any.
+    - Default value: None.
 - `startIndex`: (Optional) The starting index of the iteration range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 - `endIndex`: (Optional) The ending index of the iteration range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 
-### `.toArray([startIndex], [endIndex])`
+### `.toArray(startIndex = 0, endIndex = last)`
 
 This method converts the linked list to an array within the specified range.
 
 #### Parameters:
 
 - `startIndex`: (Optional) The starting index of the conversion range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 - `endIndex`: (Optional) The ending index of the conversion range.
+    - Type expected: Number(int).
+    - Default value: index of the last item in the list.
 
 #### Returns:
-
-- An array representation of the linked list within the specified range.
+- Array
+    - An array representation of the linked list within the specified range.
 
 Explore the various methods to effectively manage and manipulate linked lists using EZListJS in your JavaScript applications.
 
 
 ## Advanced Topic: Time Complexity Analysis
 
+Understanding the time complexity of each method can help you optimize your code and make informed decisions when working with large datasets in EZListJS.
+
 Below is an analysis of the time complexity for each method in the EZListJS library:
 
-### `.add(item, index = last)`
-
-This method adds an item to the linked list at the specified index.
-
-#### Time Complexity:
+### Time Complexity `.add()`:
 - Add in empty: O(1)
 - Add in first: O(1)
 - Add in middle: O(n)
 - Add in last: O(1)
 
-### `.remove(index = last)`
-
-This method removes the item at the specified index from the linked list.
-
-#### Time Complexity:
+### Time Complexity `.remove()`:
+- Remove in empty: O(1)
 - Remove from first: O(1)
 - Remove from middle: O(n)
 - Remove from last: O(n)
 
-### `.isEmpty()`
-
-This method checks if the linked list is empty.
-
-#### Time Complexity:
+### Time Complexity `.isEmpty()`:
 - O(1)
 
-### `.size()`
-
-This method returns the number of items in the linked list.
-
-#### Time Complexity:
+### Time Complexity `.size()`:
 - O(1)
 
-### `.item(index)`
-
-This method returns the item at the specified index in the linked list.
-
-#### Time Complexity:
-- Accessing by index: O(n)
-
-### `.indexOf(item [, startIndex [, endIndex]])`
-
-This method returns the index of the first occurrence of the specified item within the specified range.
-
-#### Time Complexity:
-- Searching: O(n)
-
-### `.lastIndexOf(item [, startIndex [, endIndex]])`
-
-This method returns the index of the last occurrence of the specified item within the specified range.
-
-#### Time Complexity:
-- Searching: O(n)
-
-### `.include(item [, startIndex [, endIndex]])`
-
-This method checks if the specified item is included in the linked list within the specified range.
-
-#### Time Complexity:
-- Searching: O(n)
-
-### `.findAll(item [, startIndex [, endIndex]])`
-
-This method returns an array of all occurrences of the specified item within the specified range.
-
-#### Time Complexity:
-- Searching: O(n)
-
-### `.forEach(callback [, startIndex [, endIndex]])`
-
-This method executes a provided function once for each item in the linked list within the specified range.
-
-#### Time Complexity:
+### Time Complexity `.item()`:
 - O(n)
 
-### `.toArray([startIndex [, endIndex]])`
-
-This method converts the linked list to an array within the specified range.
-
-#### Time Complexity:
+### Time Complexity `.indexOf()`:
 - O(n)
 
-Understanding the time complexity of each method can help you optimize your code and make informed decisions when working with large datasets in EZListJS.
+### Time Complexity `.lastIndexOf()`:
+- O(n)
+
+### Time Complexity `.include()`:
+- O(n)
+
+### Time Complexity `.findAll()`:
+- O(n)
+
+### Time Complexity `.forEach()`:
+- O(n)
+
+### Time Complexity `.toArray()`:
+- O(n)
