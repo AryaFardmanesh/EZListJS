@@ -4,7 +4,7 @@ EZListJS is a lightweight and easy-to-use JavaScript library designed for workin
 
 ## License
 
-EZListJS is licensed under the [MIT License](LICENSE.md).
+EZListJS is licensed under the [MIT License](LICENSE).
 
 ## Features
 
