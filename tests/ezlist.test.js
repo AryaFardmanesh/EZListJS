@@ -1134,9 +1134,6 @@ describe('Test .forEach method - Group', () => {
             expect(actual).toEqual(expected);
         });
 
-        /*
-        ISSUE | Bug: When we loop through the reference data with the .forEach method, we can change the original data with this method.
-
         it('It should not be able to make any changes to the main list data - Unit 2', () => {
             linkedList.add({ id : 1 });
             linkedList.add({ id : 2 });
@@ -1152,7 +1149,38 @@ describe('Test .forEach method - Group', () => {
 
             expect(actual).toEqual(expected);
         });
-        */
+
+        it('It should not be able to make any changes to the main list data - Unit 3', () => {
+            linkedList.add([1]);
+            linkedList.add([2]);
+            linkedList.add([3]);
+            linkedList.add([4]);
+
+            linkedList.forEach((value) => {
+                value[0] = 0;
+            });
+
+            let actual = linkedList.toArray();
+            let expected = [[1], [2], [3], [4]];
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('It should not be able to make any changes to the main list data - Unit 4', () => {
+            linkedList.add(function () {});
+            linkedList.add(function () {});
+            linkedList.add(function () {});
+            linkedList.add(function () {});
+
+            linkedList.forEach((value) => {
+                value = 0;
+            });
+
+            let actual = linkedList.toArray();
+            let expected = [0, 0, 0, 0];
+
+            expect(actual).not.toEqual(expected);
+        });
     });
 });
 

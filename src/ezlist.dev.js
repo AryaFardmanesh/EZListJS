@@ -29,6 +29,18 @@ class LinkedList {
             isEmpty : function () {
                 return (_size == 0);
             },
+            copy : function (data) {
+                if (typeof data == 'function') {
+                    return data.bind({});
+                }else if (typeof data == 'object') {
+                    let copyed = data.constructor();
+                    for (let attr in data)
+                        if (data.hasOwnProperty(attr))
+                            copyed[attr] = data[attr];
+                    return copyed;
+                }else
+                    return data;
+            },
             filter : {
                 range : function (index, min, max, methodName) {
                     if (index < min || index > max)
@@ -269,7 +281,7 @@ class LinkedList {
             }
 
             while (cursor < endIndex) {
-                functionToCall(current.value);
+                functionToCall(privateMethods.copy(current.value));
 
                 cursor++;
                 current = current.next;
