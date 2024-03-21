@@ -1348,3 +1348,102 @@ describe('Test .toArray method - Group', () => {
         }).toThrow(TypeError);
     });
 });
+
+describe('Test .toList method - Group', () => {
+    it('It should correctly adding array into the list - Unit 1', () => {
+        let myArr = ['item 1', 'item 2', 'item 3'];
+        linkedList.toList(myArr);
+
+        let actual = linkedList.toArray();
+        let expected = myArr;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('It should correctly adding array into the list - Unit 2', () => {
+        linkedList.add('item 1');
+        linkedList.add('item 2');
+
+        let myArr = ['item 3', 'item 4', 'item 5'];
+        linkedList.toList(myArr);
+
+        let actual = linkedList.toArray();
+        let expected = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5'];
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('It should correctly adding array into the list - Unit 3', () => {
+        linkedList.add('item 1');
+        linkedList.add('item 2');
+
+        let myArr = ['item 3', 'item 4', 'item 5'];
+        linkedList.toList(myArr);
+
+        linkedList.remove();
+        linkedList.remove();
+
+        let actual = linkedList.toArray();
+        let expected = ['item 1', 'item 2', 'item 3'];
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('It should correctly increment size of list - Unit 4', () => {
+        let myArr = ['item 1', 'item 2', 'item 3'];
+        linkedList.toList(myArr);
+
+        let actual = linkedList.size();
+        let expected = 3;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('It should correctly increment size of list - Unit 5', () => {
+        let myArr = ['item 1', 'item 2', 'item 3'];
+        linkedList.toList(myArr);
+
+        linkedList.remove();
+
+        let actual = linkedList.size();
+        let expected = 2;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('It should correctly increment size of list - Unit 6', () => {
+        linkedList.add('item 0');
+
+        let myArr = ['item 1', 'item 2', 'item 3'];
+        linkedList.toList(myArr);
+
+        let actual = linkedList.size();
+        let expected = 4;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('It should correctly increment size of list - Unit 7', () => {
+        linkedList.add('item 0');
+
+        let myArr = ['item 1', 'item 2', 'item 3'];
+        linkedList.toList(myArr);
+
+        linkedList.remove();
+
+        let actual = linkedList.size();
+        let expected = 3;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('It should correctly insert data when the parameter is not array - Unit 8', () => {
+        let data = 'Hello world!';
+        linkedList.toList(data);
+
+        let actual = linkedList.toArray();
+        let expected = Array.from(data);
+
+        expect(actual).toEqual(expected);
+    });
+});

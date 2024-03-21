@@ -206,6 +206,17 @@ This method converts the linked list to an array within the specified range.
 - Array
     - An array representation of the linked list within the specified range.
 
+### `.toList(array = [])`
+
+This method takes an array as input and adds its elements to linked list.
+
+#### Parameters:
+
+- `array`: The starting index of the conversion range.
+    - Type expected: Array like `['item', 'item']`.
+        - If this parameter is given something other than an array, it will convert it to an array using Array.form and then do the rest.
+    - Default value: A empty array like `[]`.
+
 Explore the various methods to effectively manage and manipulate linked lists using EZListJS in your JavaScript applications.
 
 
@@ -252,4 +263,7 @@ Below is an analysis of the time complexity for each method in the EZListJS libr
 - O(n)
 
 ### Time Complexity `.toArray()`:
+- O(n)
+
+### Time Complexity `.toList()`:
 - O(n)

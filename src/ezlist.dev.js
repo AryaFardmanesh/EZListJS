@@ -313,6 +313,13 @@ class LinkedList {
 
             return arr;
         }
+
+        this.toList = function (arr = []) {
+            if (!Array.isArray(arr))
+                arr = Array.from(arr);
+            for (let item of arr)
+                this.add(item);
+        }
         // Finish linked list public methods
     }
 }
